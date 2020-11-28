@@ -4,6 +4,10 @@
 @import "header.scss";
 @import "slider.scss";
 @import "categories.scss";
+@import "deals.scss";
+@import "banners.scss";
+@import "sale-banner.scss";
+@import "sellers.scss";
 
 body {
   font-family: "Jost";
@@ -26,7 +30,6 @@ li {
   width: 100%;
   max-width: 1170px;
   margin: 0 auto;
-  height: 20px;
 }
 
 .circle {
@@ -75,4 +78,20 @@ li {
   -moz-transform: translate(40%, -40%);
   -ms-transform: translate(40%, -40%);
   -o-transform: translate(40%, -40%);
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 48px;
+  color: #111;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: #525252;
+  text-align: center;
+  line-height: 24px;
 }

@@ -6,10 +6,18 @@ $(".slider").slick({
   dots: true,
   slidesToShow: 1,
   slidesToScroll: 1,
+  speed: 700,
 });
 
 $(".categories__slider").slick({
   slidesToShow: 7,
   draggable: false,
-  infinite: true,
+});
+
+$(".deals__slider").slick({
+  slidesToShow: 3,
+  dots: true,
+  arrows: false,
+  slidesToScroll: 3,
+  speed: 700,
 });
