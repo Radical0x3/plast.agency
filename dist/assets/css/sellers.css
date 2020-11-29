@@ -1,5 +1,5 @@
 .sellers {
-    margin: 110px;
+    margin-bottom: 110px;
 }
 
 .sellers .section-title {
@@ -12,6 +12,8 @@
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-bottom: 90px;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 .sellers__item {
