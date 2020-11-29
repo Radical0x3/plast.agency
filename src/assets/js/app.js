@@ -9,6 +9,57 @@ $(".header__menu li").on("click", function () {
 });
 // <------ Header menu END ------>
 
+// <------ Header select START ------>
+$(".header__top-nav li").on("click", function () {
+  let ul = $(this).children("ul");
+  // $(this).toggleClass("active");
+  if ($(this).hasClass("active")) {
+    $(this).removeClass("active");
+  } else {
+    $(".header__top-nav li.active").removeClass("active");
+    $(this).addClass("active");
+  }
+  if ($(ul).hasClass("hidden")) {
+    let tmp = $(".header__top-nav li > ul.active");
+    tmp.removeClass("active");
+    tmp.addClass("hidden");
+
+    ul.removeClass("hidden");
+    ul.addClass("active");
+  } else {
+    ul.removeClass("active");
+    ul.addClass("hidden");
+  }
+});
+
+$(".header__top-nav li ul li").on("click", function () {
+  let li = $(this).parent().parent();
+  let img = $(li).children("img");
+  let span = $(li).children("span");
+  if (
+    typeof img.attr("src") !== typeof undefined &&
+    typeof img.attr("src") !== false
+  ) {
+    $(img).attr("src", $(this).children("img").attr("src"));
+  }
+  $(span).text($(this).children("span").text());
+  $(this).parent().parent().toggleClass("active");
+});
+
+let container = $(".header__top-nav li");
+$(document).mouseup(function (e) {
+  let select = $(".header__top-nav li > ul");
+  if (
+    container.has(e.target).length === 0 &&
+    select.has(e.target).length === 0
+  ) {
+    select.removeClass("active");
+    select.addClass("hidden");
+    container.removeClass("active");
+  }
+});
+// <------ Header select END ------>
+
 // <------ Sellers color select START ------>
 $(".sellers__circle").on("click", function () {
   if (!$(this).hasClass("active")) {
