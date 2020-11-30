@@ -2,6 +2,46 @@
     position: relative;
 }
 
+@media (max-width: 900px) {
+    .slider .circle.big {
+        width: 74px;
+        height: 74px;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider .circle.big {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 500px) {
+    .slider .circle.big {
+        width: 45px;
+        height: 45px;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 900px) {
+    .slider .circle.big span {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider .circle.big span {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 500px) {
+    .slider .circle.big span {
+        font-size: 16px;
+    }
+}
+
 .slider img {
     width: 100%;
 }
@@ -11,19 +51,70 @@
 }
 
 .slider__proposal {
-    width: 100%;
-    max-width: 470px;
-    padding: 40px 0 42px 40px;
+    width: 33%;
+    padding: 40px 20px 42px 40px;
     position: absolute;
     left: 6%;
     bottom: 25%;
     background-color: #fff;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .slider__proposal {
+        padding: 20px 10px 20px 20px;
+        width: 40%;
+    }
+}
+
+@media (max-width: 500px) {
+    .slider__proposal {
+        padding: 10px;
+        width: 50%;
+    }
+}
+
+@media (max-width: 375px) {
+    .slider__proposal {
+        width: 60%;
+        bottom: 17%;
+    }
 }
 
 .slider__proposal h1 {
     font-size: 48px;
     font-weight: 500;
     margin-bottom: 20px;
+}
+
+@media (max-width: 1125px) {
+    .slider__proposal h1 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 900px) {
+    .slider__proposal h1 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider__proposal h1 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 580px) {
+    .slider__proposal h1 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .slider__proposal h1 {
+        margin-bottom: 10px;
+    }
 }
 
 .slider__proposal a {
@@ -154,4 +245,22 @@
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    .slider .slick-dots {
+        bottom: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .slider .slick-dots {
+        bottom: 10px;
+    }
+}
+
+@media (max-width: 375px) {
+    .slider .slick-dots {
+        bottom: 7px;
+    }
 }

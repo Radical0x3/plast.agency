@@ -23,7 +23,6 @@ $(".header__top-nav li").on("click", function () {
     let tmp = $(".header__top-nav li > ul.active");
     tmp.removeClass("active");
     tmp.addClass("hidden");
-
     ul.removeClass("hidden");
     ul.addClass("active");
   } else {
@@ -59,6 +58,63 @@ $(document).mouseup(function (e) {
   }
 });
 // <------ Header select END ------>
+
+// <------ Mobile select START ------>
+$(".header__mobile-selects li").on("click", function () {
+  let ul = $(this).children("ul");
+  if ($(this).hasClass("active")) {
+    $(this).removeClass("active");
+  } else {
+    $(".header__mobile-selects li.active").removeClass("active");
+    $(this).addClass("active");
+  }
+  if ($(ul).hasClass("hidden")) {
+    let tmp = $(".header__mobile-selects li > ul.active");
+    tmp.removeClass("active");
+    tmp.addClass("hidden");
+    ul.removeClass("hidden");
+    ul.addClass("active");
+  } else {
+    ul.removeClass("active");
+    ul.addClass("hidden");
+  }
+});
+
+$(".header__mobile-selects li ul li").on("click", function () {
+  let li = $(this).parent().parent();
+  let img = $(li).children("img");
+  let span = $(li).children("span");
+  if (
+    typeof img.attr("src") !== typeof undefined &&
+    typeof img.attr("src") !== false
+  ) {
+    $(img).attr("src", $(this).children("img").attr("src"));
+  }
+  $(span).text($(this).children("span").text());
+  $(this).parent().parent().toggleClass("active");
+});
+
+let mobile_container = $(".header__mobile-selects li");
+$(document).mouseup(function (e) {
+  let select = $(".header__mobile-selects li > ul");
+  if (
+    mobile_container.has(e.target).length === 0 &&
+    select.has(e.target).length === 0
+  ) {
+    select.removeClass("active");
+    select.addClass("hidden");
+    mobile_container.removeClass("active");
+  }
+});
+// <------ Mobile select END ------>
+
+// <------ Mobile burger START ------>
+$(".header__burger").on("click", function () {
+  $(this).toggleClass("active");
+  $(".header__mobile").toggleClass("active");
+  $("body").toggleClass("lock");
+});
+// <------ Mobile burger END ------>
 
 // <------ Sellers color select START ------>
 $(".sellers__circle").on("click", function () {

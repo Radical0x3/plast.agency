@@ -1,17 +1,30 @@
 .categories {
   background-color: #1f1f1f;
-  height: 130px;
+  // height: 130px;
   position: relative;
   margin-bottom: 97px;
 
+  @media (max-width: 769px) {
+    margin-bottom: 50px;
+  }
+
   .container {
-    border-right: 1px solid #303030;
-    border-left: 1px solid #303030;
+    @media (max-width: 1240px) {
+      border: 0;
+      padding: 0;
+    }
   }
 
   &__slider {
     position: relative;
     display: flex;
+
+    border-right: 1px solid #303030;
+    border-left: 1px solid #303030;
+
+    @media (max-width: 1240px) {
+      border: 0;
+    }
   }
 
   &__item {
@@ -24,7 +37,9 @@
       justify-content: center;
       height: 130px;
 
-      border-right: 1px solid #303030;
+      @media (max-width: 500px) {
+        height: 100px;
+      }
     }
 
     img {
@@ -54,6 +69,14 @@
     }
     &-track {
       display: flex;
+    }
+    &-slide {
+      // max-width: 170px;
+    }
+    &-active {
+      &:not(:last-of-type) {
+        border-right: 1px solid #303030;
+      }
     }
     &-arrow {
       position: absolute;
@@ -96,6 +119,10 @@
         -ms-transition: 0.3s;
         -o-transition: 0.3s;
       }
+
+      @media (max-width: 1285px) {
+        left: -25px;
+      }
     }
     &-next {
       right: -45px;
@@ -117,6 +144,10 @@
         -moz-transition: 0.3s;
         -ms-transition: 0.3s;
         -o-transition: 0.3s;
+      }
+
+      @media (max-width: 1285px) {
+        right: -25px;
       }
     }
   }

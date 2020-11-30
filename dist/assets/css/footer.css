@@ -5,8 +5,20 @@
     padding-top: 110px;
 }
 
+@media (max-width: 769px) {
+    .footer {
+        padding-top: 50px;
+    }
+}
+
 .footer__subscribe {
     margin-bottom: 100px;
+}
+
+@media (max-width: 800px) {
+    .footer__subscribe {
+        margin-bottom: 50px;
+    }
 }
 
 .footer__subscribe h2 {
@@ -18,7 +30,8 @@
 }
 
 .footer form {
-    width: 570px;
+    max-width: 570px;
+    width: 100%;
     display: -ms-flexbox;
     display: flex;
     margin: 0 auto;
@@ -102,6 +115,23 @@
     margin-bottom: 90px;
 }
 
+@media (max-width: 800px) {
+    .footer__nav {
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 426px) {
+    .footer__nav {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
 .footer__nav a {
     color: #cdcdcd;
     transition: 0.3s;
@@ -119,6 +149,12 @@
     color: #cdcdcd;
 }
 
+@media (max-width: 800px) {
+    .footer__nav-item {
+        margin: 15px;
+    }
+}
+
 .footer__nav-item h2 {
     font-size: 28px;
     font-weight: 600;
@@ -132,6 +168,12 @@
     text-transform: uppercase;
     color: #fff;
     margin-bottom: 16px;
+}
+
+@media (max-width: 800px) {
+    .footer__nav-item h3 {
+        font-size: 16px;
+    }
 }
 
 .footer__nav-item:first-child {
@@ -159,6 +201,18 @@
     margin-bottom: 10px;
 }
 
+@media (max-width: 800px) {
+    .footer__support-item, .footer__shop-item, .footer__company-item, .footer__contact-item {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 800px) {
+    .footer__support, .footer__shop, .footer__company, .footer__contact {
+        font-size: 20px;
+    }
+}
+
 .footer__bottom {
     border-top: 1px solid #2b2b2b;
 }
@@ -173,9 +227,32 @@
     padding: 26px 0;
 }
 
+@media (max-width: 600px) {
+    .footer__bottom .container {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+}
+
 .footer__bottom .container span {
     color: #767676;
     font-size: 13px;
+    padding: 0 10px;
+}
+
+@media (max-width: 800px) {
+    .footer__bottom .container span {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer__bottom .container span {
+        margin-bottom: 20px;
+        text-align: center;
+    }
 }
 
 .footer__payments {

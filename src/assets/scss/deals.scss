@@ -1,21 +1,39 @@
 .deals {
   margin-bottom: 100px;
 
+  @media (max-width: 769px) {
+    margin-bottom: 50px;
+  }
+
   .container {
     padding-bottom: 56px;
     position: relative;
+
+    @media (max-width: 769px) {
+      padding-bottom: 30px;
+    }
+  }
+
+  .section-title {
+    @media (max-width: 769px) {
+      margin-bottom: 15px;
+    }
   }
 
   .section-subtitle {
     margin-bottom: 73px;
+
+    @media (max-width: 769px) {
+      margin-bottom: 35px;
+    }
   }
 
   &__slider {
+    margin: 0 -10px;
     &-item {
       max-width: 370px;
       padding-bottom: 50px;
       position: relative;
-      
 
       a {
         color: #111;
@@ -39,6 +57,10 @@
         font-size: 24px;
         font-weight: 500;
         margin-bottom: 11px;
+
+        @media (max-width: 769px) {
+          font-size: 18px;
+        }
       }
 
       transform: translate(-50%, 0);
@@ -46,6 +68,26 @@
       -moz-transform: translate(-50%, 0);
       -ms-transform: translate(-50%, 0);
       -o-transform: translate(-50%, 0);
+
+      @media (max-width: 1100px) {
+        width: 250px;
+      }
+
+      @media (max-width: 920px) {
+        width: 210px;
+      }
+
+      @media (max-width: 769px) {
+        width: 180px;
+      }
+
+      @media (max-width: 670px) {
+        width: 180px;
+      }
+
+      @media (max-width: 460px) {
+        width: 150px;
+      }
     }
 
     &-old-price {
@@ -53,12 +95,19 @@
       color: #a0a0a0;
       text-decoration: line-through;
       margin-right: 5px;
+
+      @media (max-width: 769px) {
+        font-size: 13px;
+      }
     }
 
     &-new-price {
       font-size: 18px;
-
       color: #ff6f61;
+
+      @media (max-width: 769px) {
+        font-size: 14px;
+      }
     }
 
     &-timer {
@@ -80,6 +129,7 @@
     }
     &-track {
       display: flex;
+      justify-content: center;
     }
     &-slide {
       display: flex;
@@ -115,6 +165,11 @@
         -ms-border-radius: 50%;
         -o-border-radius: 50%;
       }
+      transform: translate(-50%, 0);
+      -webkit-transform: translate(-50%, 0);
+      -moz-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+      -o-transform: translate(-50%, 0);
     }
   }
 }

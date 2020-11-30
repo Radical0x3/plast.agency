@@ -1,5 +1,9 @@
 .newsletter {
-  padding-bottom: 110px;
+  padding: 0 10px 110px;
+
+  @media (max-width: 769px) {
+    padding-bottom: 50px;
+  }
 
   .section-title {
     margin-bottom: 17px;
@@ -46,7 +50,7 @@
 
   &__email {
     width: 100%;
-    padding: 0 0 15px 30px;
+    padding: 0 10px 15px 30px;
     font-size: 15px;
     color: #767676;
 

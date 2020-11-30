@@ -1,6 +1,38 @@
 .slider {
   position: relative;
 
+  .circle.big {
+    @media (max-width: 900px) {
+      width: 74px;
+      height: 74px;
+    }
+
+    @media (max-width: 768px) {
+      width: 60px;
+      height: 60px;
+    }
+
+    @media (max-width: 500px) {
+      width: 45px;
+      height: 45px;
+      font-size: 11px;
+    }
+
+    span {
+      @media (max-width: 900px) {
+        font-size: 28px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 22px;
+      }
+
+      @media (max-width: 500px) {
+        font-size: 16px;
+      }
+    }
+  }
+
   img {
     width: 100%;
     // max-height: 535px;
@@ -11,18 +43,54 @@
   }
 
   &__proposal {
-    width: 100%;
-    max-width: 470px;
-    padding: 40px 0 42px 40px;
+    width: 33%;
+    // max-width: 470px;
+    padding: 40px 20px 42px 40px;
     position: absolute;
     left: 6%;
     bottom: 25%;
     background-color: #fff;
+    box-sizing: border-box;
+
+    @media (max-width: 768px) {
+      padding: 20px 10px 20px 20px;
+      width: 40%;
+    }
+
+    @media (max-width: 500px) {
+      padding: 10px;
+      width: 50%;
+    }
+
+    @media (max-width: 375px) {
+      width: 60%;
+      bottom: 17%;
+    }
 
     h1 {
       font-size: 48px;
       font-weight: 500;
       margin-bottom: 20px;
+
+      @media (max-width: 1125px) {
+        font-size: 36px;
+      }
+
+      @media (max-width: 900px) {
+        font-size: 28px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 24px;
+      }
+
+      @media (max-width: 580px) {
+        font-size: 20px;
+      }
+
+      @media (max-width: 500px) {
+        margin-bottom: 10px;
+      }
     }
 
     a {
@@ -148,6 +216,18 @@
         -moz-border-radius: 50%;
         -ms-border-radius: 50%;
         -o-border-radius: 50%;
+      }
+
+      @media (max-width: 768px) {
+        bottom: 20px;
+      }
+
+      @media (max-width: 500px) {
+        bottom: 10px;
+      }
+
+      @media (max-width: 375px) {
+        bottom: 7px;
       }
     }
   }

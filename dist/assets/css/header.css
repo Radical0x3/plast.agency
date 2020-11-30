@@ -5,6 +5,22 @@
     justify-content: space-between;
     -ms-flex-align: center;
     align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 985px) {
+    .header .container {
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .header .container {
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
 }
 
 .header__top {
@@ -16,6 +32,12 @@
 .header__top-left {
     display: -ms-flexbox;
     display: flex;
+}
+
+@media (max-width: 985px) {
+    .header__top-left {
+        margin-bottom: 15px;
+    }
 }
 
 .header__top-nav {
@@ -104,6 +126,12 @@
     display: flex;
 }
 
+@media (max-width: 600px) {
+    .header__top {
+        display: none;
+    }
+}
+
 .header__countries {
     width: 160px;
     position: absolute;
@@ -118,6 +146,11 @@
     -moz-transition: 0.3s;
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
+    transform: translate(0, -100%);
+    -webkit-transform: translate(0, -100%);
+    -moz-transform: translate(0, -100%);
+    -ms-transform: translate(0, -100%);
+    -o-transform: translate(0, -100%);
 }
 
 .header__countries.hidden {
@@ -128,6 +161,11 @@
 .header__countries.active {
     opacity: 1;
     visibility: visible;
+    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
 }
 
 .header__countries-item {
@@ -162,6 +200,11 @@
     -moz-transition: 0.3s;
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
+    transform: translate(0, -100%);
+    -webkit-transform: translate(0, -100%);
+    -moz-transform: translate(0, -100%);
+    -ms-transform: translate(0, -100%);
+    -o-transform: translate(0, -100%);
 }
 
 .header__currency.hidden {
@@ -172,6 +215,11 @@
 .header__currency.active {
     opacity: 1;
     visibility: visible;
+    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
 }
 
 .header__currency-item {
@@ -202,6 +250,11 @@
     -moz-transition: 0.3s;
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
+    transform: translate(0, -100%);
+    -webkit-transform: translate(0, -100%);
+    -moz-transform: translate(0, -100%);
+    -ms-transform: translate(0, -100%);
+    -o-transform: translate(0, -100%);
 }
 
 .header__languages.hidden {
@@ -212,6 +265,11 @@
 .header__languages.active {
     opacity: 1;
     visibility: visible;
+    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
 }
 
 .header__languages-item {
@@ -291,9 +349,83 @@
     padding: 35px 0;
 }
 
+@media (max-width: 600px) {
+    .header__main {
+        padding: 25px 0;
+    }
+}
+
+.header__burger {
+    display: none;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    z-index: 3;
+}
+
+.header__burger span {
+    position: absolute;
+    background-color: #111;
+    width: 100%;
+    left: 0;
+    height: 2px;
+    top: 9px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.header__burger::before, .header__burger::after {
+    content: "";
+    background-color: #111;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.header__burger::before {
+    top: 0;
+}
+
+.header__burger::after {
+    bottom: 0;
+}
+
+.header__burger.active span {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+.header__burger.active::before {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 9px;
+}
+
+.header__burger.active::after {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    bottom: 9px;
+}
+
+@media (max-width: 600px) {
+    .header__burger {
+        display: block;
+    }
+}
+
 .header__title {
     font-size: 28px;
     font-weight: 600;
+    margin-right: 20px;
 }
 
 .header__menu {
@@ -344,6 +476,12 @@
     -o-transition: 0.3s;
 }
 
+@media (max-width: 600px) {
+    .header__menu {
+        display: none;
+    }
+}
+
 .header__icons {
     display: -ms-flexbox;
     display: flex;
@@ -354,4 +492,178 @@
 .header__icons li {
     margin: 0 10px;
     position: relative;
+}
+
+@media (max-width: 745px) {
+    .header__icons {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header__icons {
+        display: none;
+    }
+}
+
+.header__mobile {
+    position: fixed;
+    top: 75px;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+    padding: 20px 0;
+    background-color: #fff;
+    z-index: 3;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transform: translate(120%, 0);
+    -webkit-transform: translate(120%, 0);
+    -moz-transform: translate(120%, 0);
+    -ms-transform: translate(120%, 0);
+    -o-transform: translate(120%, 0);
+}
+
+.header__mobile.active {
+    overflow: auto;
+    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+}
+
+.header__mobile li {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.header__mobile li img {
+    width: 24px;
+    height: 24px;
+}
+
+.header__mobile li a {
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.header__mobile li a:hover {
+    color: #ff6f61;
+}
+
+.header__mobile-social, .header__mobile-user {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.header__mobile-social li, .header__mobile-user li {
+    margin: 10px 10px;
+}
+
+.header__mobile-user li {
+    position: relative;
+}
+
+.header__mobile-selects > li {
+    position: relative;
+    cursor: pointer;
+}
+
+.header__mobile-selects > li.active::before {
+    top: 10px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+}
+
+.header__mobile-selects > li::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 4px;
+    right: 35px;
+    border-top: 1px solid #111111;
+    border-right: 1px solid #111111;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.header__mobile-selects > li:not(:last-child)::after {
+    content: "";
+    display: block;
+    height: 20px;
+    width: 0;
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    border-right: 2px solid #cdcdcd;
+    transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+}
+
+.header__mobile-selects .header__countries {
+    width: 100%;
+    background-color: #fff;
+    top: 30px;
+    left: 0;
+    padding: 10px 10px;
+}
+
+.header__mobile-selects .header__countries li {
+    text-align: center;
+    margin: 15px 10px 15px 0;
+}
+
+.header__mobile-selects .header__countries li img {
+    margin-right: 0px !important;
+}
+
+.header__mobile-selects .header__currency {
+    width: 100%;
+    background-color: #fff;
+    top: 30px;
+}
+
+.header__mobile-selects .header__currency li {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.header__mobile-selects .header__languages {
+    width: 100%;
+    background-color: #fff;
+    top: 30px;
+}
+
+.header__mobile-selects .header__languages li {
+    text-align: center;
+    margin: 15px 0;
 }
