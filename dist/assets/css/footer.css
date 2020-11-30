@@ -227,10 +227,10 @@
     padding: 26px 0;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 630px) {
     .footer__bottom .container {
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
         -ms-flex-pack: center;
         justify-content: center;
     }
@@ -248,9 +248,8 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 630px) {
     .footer__bottom .container span {
-        margin-bottom: 20px;
         text-align: center;
     }
 }
@@ -262,4 +261,10 @@
 
 .footer__payments-item:not(:last-child) {
     margin-right: 5px;
+}
+
+@media (max-width: 630px) {
+    .footer__payments {
+        margin-bottom: 20px;
+    }
 }
